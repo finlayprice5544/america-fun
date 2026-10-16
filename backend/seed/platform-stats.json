@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "data": {
+    "totalTokensLaunched": 421,
+    "totalAolStaked": "349497913.992347",
+    "totalAolRewardClaimed": "106201.793293",
+    "totalTreasuryFeeUsd": "158244.960673",
+    "totalCreatorFeeUsd": "189155.004670",
+    "totalVolumeUsd": "339838989.212604",
+    "volume24hUsd": "11.628576"
+  }
+}

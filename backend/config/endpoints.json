@@ -1,0 +1,254 @@
+{
+  "_note": "Endpoint manifest — generated from captured recordings of america.fun. One entry per API endpoint the cloned frontend calls. The route-implementer agent creates one src/routes/<name>.rs per entry; smoke tests each.",
+  "source": "america.fun",
+  "subdomainMapping": {
+    "server-api.america.fun": "/api/*",
+    "api.america.fun": "/api/*",
+    "gateway.america.fun": "/api/gateway/*",
+    "america.fun": "/api/*"
+  },
+  "endpoints": [
+    {
+      "name": "platform_stats",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/platform/stats",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { totalTokensLaunched: u32, totalAolStaked: String, totalAolRewardClaimed: String, totalTreasuryFeeUsd: String, totalCreatorFeeUsd: String, totalVolumeUsd: String, volume24hUsd: String } }",
+      "sampleBodyFile": "seed/platform-stats.json",
+      "dataSource": "seed",
+      "notes": "Aggregate platform statistics"
+    },
+    {
+      "name": "aol_token_stats",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/platform/aol-token/stats",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { currentPriceUsd: String, marketCapUsd: String, totalDexVolumeUsd: String, volume24hUsd: String } }",
+      "sampleBodyFile": "seed/aol-token-stats.json",
+      "dataSource": "seed",
+      "notes": "Platform native token (AOL) price and market data"
+    },
+    {
+      "name": "settings",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/settings",
+      "query": "",
+      "responseEnvelope": "{ enableNoEarlyUnstakeUi: bool }",
+      "sampleBodyFile": "seed/settings.json",
+      "dataSource": "seed",
+      "notes": "Feature flags / site settings"
+    },
+    {
+      "name": "aol_staking_stats",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/aol-staking/stats",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { totalStaked: String, totalRewardClaimed: String, totalStakingPower: String, rewardClaimed30d: String, newStake30d: String } }",
+      "sampleBodyFile": "seed/staking-stats.json",
+      "dataSource": "seed",
+      "notes": "Staking program aggregates"
+    },
+    {
+      "name": "fee_vault_history",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/fee-vault/v2/global-history",
+      "query": "granularity=day&limit=30",
+      "responseEnvelope": "{ success: bool, data: FeeVaultPeriod[] }",
+      "sampleBodyFile": "seed/fee-vault-history.json",
+      "dataSource": "clickhouse",
+      "notes": "Fee vault daily breakdown — time-series. Query params: granularity (day|hour), limit"
+    },
+    {
+      "name": "leaderboard",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/leaderboard",
+      "query": "",
+      "responseEnvelope": "{ success: bool, leaderboard: { rank: u32, user_address: String, points: f64 }[] }",
+      "sampleBodyFile": "seed/leaderboard.json",
+      "dataSource": "clickhouse",
+      "notes": "Points leaderboard — top 100 users by accumulated points"
+    },
+    {
+      "name": "tokens_system_list",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/tokens/system-list",
+      "query": "",
+      "responseEnvelope": "Token[]",
+      "sampleBodyFile": "seed/system-list.json",
+      "dataSource": "seed",
+      "notes": "System token list — large array of all tokens. Uses same Token shape as tokens/list"
+    },
+    {
+      "name": "volume_cumulative_daily",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/volume/cumulative-daily",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { day: String, dailyVolumeUsd: String, cumulativeVolumeUsd: String }[] }",
+      "sampleBodyFile": "seed/volume-daily.json",
+      "dataSource": "clickhouse",
+      "notes": "Full cumulative daily volume history — time-series"
+    },
+    {
+      "name": "token_market_ath",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/token-market/:mint/ath",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { highestMarketCapUsd: f64, highestPriceUsd: f64, timestamp: u64 } }",
+      "sampleBodyFile": "seed/token-market-ath.json",
+      "dataSource": "seed+rocksdb",
+      "notes": "All-time high for a specific token by mint address"
+    },
+    {
+      "name": "token_market_chart_peak",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/token-market/:mint/chart-peak",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { highestCloseUsd: f64 } }",
+      "sampleBodyFile": "seed/token-market-chart-peak.json",
+      "dataSource": "seed+rocksdb",
+      "notes": "Chart peak close price for a specific token"
+    },
+    {
+      "name": "token_market_holders",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/token-market/:mint/holders",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { holders: Holder[] } }",
+      "sampleBodyFile": "seed/token-market-holders.json",
+      "dataSource": "seed+rocksdb",
+      "notes": "Top holders for a specific token. Holder: { address, amount, uiAmount, decimals, uiAmountString, rank, percentage }"
+    },
+    {
+      "name": "token_market_trades",
+      "origin": "server-api.america.fun",
+      "method": "GET",
+      "path": "/api/token-market/:mint/trades",
+      "query": "",
+      "responseEnvelope": "{ success: bool, data: { trades: TokenTrade[] } }",
+      "sampleBodyFile": "seed/token-market-trades.json",
+      "dataSource": "clickhouse",
+      "notes": "Recent trades for a specific token. TokenTrade: { txid, owner, side, amount, usdValue, timestamp, price }"
+    },
+    {
+      "name": "tokens_by_mints",
+      "origin": "api.america.fun",
+      "method": "GET",
+      "path": "/api/tokens/by-mints",
+      "query": "ids=<mint1,mint2,...>&blocking=0|1&client_id=<id>",
+      "responseEnvelope": "{ success: bool, tokens: Token[], ... }",
+      "sampleBodyFile": "seed/tokens-list.json",
+      "dataSource": "seed+rocksdb",
+      "notes": "Fetch token details by comma-separated mint addresses"
+    },
+    {
+      "name": "tokens_home_launches",
+      "origin": "api.america.fun",
+      "method": "GET",
+      "path": "/api/tokens/home-launches",
+      "query": "client_id=<id>",
+      "responseEnvelope": "{ success: bool, tokens: Token[] }",
+      "sampleBodyFile": "seed/tokens-list.json",
+      "dataSource": "seed",
+      "notes": "Featured tokens for the homepage hero section"
+    },
+    {
+      "name": "tokens_list",
+      "origin": "api.america.fun",
+      "method": "GET",
+      "path": "/api/tokens/list",
+      "query": "sort=marketCap|volume24h&order=desc|asc&limit=20&offset=0&client_id=<id>",
+      "responseEnvelope": "{ success: bool, tokens: Token[], total: u32, limit: u32, offset: u32, sort: String, order: String, launchConfig: { configAddress: String, quoteMint: String } }",
+      "sampleBodyFile": "seed/tokens-list.json",
+      "dataSource": "seed+rocksdb",
+      "notes": "Paginated token list with sort/filter. Main data feed for the explore page"
+    },
+    {
+      "name": "staking_locked_metrics",
+      "origin": "api.america.fun",
+      "method": "GET",
+      "path": "/api/staking/operator/locked-metrics",
+      "query": "",
+      "responseEnvelope": "{ aol_mint: String, total_locked_raw: String, total_supply_raw: String, decimals: u8, total_locked_tokens: f64, total_supply_tokens: f64, locked_percent: f64, source: String, staking_program_id: String, vault_accounts_found: u32, staking_vault_discriminator_hex: String }",
+      "sampleBodyFile": "seed/staking-locked-metrics.json",
+      "dataSource": "seed",
+      "notes": "On-chain staking lock status — simulated"
+    },
+    {
+      "name": "api_stream",
+      "origin": "api.america.fun",
+      "method": "GET",
+      "path": "/api/stream",
+      "query": "client_id=<id>",
+      "responseEnvelope": "text/event-stream",
+      "sampleBodyFile": "",
+      "dataSource": "sse",
+      "notes": "Server-Sent Events stream for real-time token updates. Sends periodic token data events"
+    },
+    {
+      "name": "gateway_trades",
+      "origin": "gateway.america.fun",
+      "method": "GET",
+      "path": "/api/gateway/trades",
+      "query": "limit=50",
+      "responseEnvelope": "{ items: GatewayTrade[] }",
+      "sampleBodyFile": "seed/gateway-trades.json",
+      "dataSource": "clickhouse",
+      "notes": "Recent platform-wide trades across all tokens. GatewayTrade: { signature, instructionIndex, innerInstructionIndex, slot, blockTime, mint, pool, programType, trader, side, inMint, inAmount, inDecimals, outMint, outAmount, outDecimals, priceUsd, usdValue, feeAmount, feeMint }"
+    },
+    {
+      "name": "gateway_trades_stream",
+      "origin": "gateway.america.fun",
+      "method": "GET",
+      "path": "/api/gateway/trades/stream",
+      "query": "",
+      "responseEnvelope": "text/event-stream",
+      "sampleBodyFile": "",
+      "dataSource": "sse",
+      "notes": "SSE stream of real-time trades across all tokens"
+    },
+    {
+      "name": "gateway_prices_stream",
+      "origin": "gateway.america.fun",
+      "method": "GET",
+      "path": "/api/gateway/prices/stream",
+      "query": "",
+      "responseEnvelope": "text/event-stream",
+      "sampleBodyFile": "",
+      "dataSource": "sse",
+      "notes": "SSE stream of real-time price updates"
+    },
+    {
+      "name": "chart_jupiter",
+      "origin": "america.fun",
+      "method": "GET",
+      "path": "/api/chart/jupiter",
+      "query": "mint=<mint>&interval=1m|5m|15m|1h|4h|1d|7d|30d&start=<timestamp_ms>&type=price|mcap&quote=usd",
+      "responseEnvelope": "OHLCV[]",
+      "sampleBodyFile": "",
+      "dataSource": "proxy:jupiter",
+      "notes": "Proxied Jupiter chart data. Returns OHLCV candle arrays. Backend should generate synthetic candles from seed data"
+    },
+    {
+      "name": "jupiter_swap_quote",
+      "origin": "america.fun",
+      "method": "GET",
+      "path": "/api/jupiter/swap/v1/quote",
+      "query": "inputMint=<mint>&outputMint=<mint>&amount=<lamports>&slippageBps=50&swapMode=ExactIn",
+      "responseEnvelope": "{ inputMint, inAmount, outputMint, outAmount, otherAmountThreshold, swapMode, slippageBps, priceImpactPct, routePlan, contextSlot, timeTaken, swapUsdValue, ... }",
+      "sampleBodyFile": "seed/jupiter-quote.json",
+      "dataSource": "proxy:jupiter",
+      "notes": "Proxied Jupiter swap quote. Backend returns simulated quote — never wires real signing"
+    }
+  ]
+}

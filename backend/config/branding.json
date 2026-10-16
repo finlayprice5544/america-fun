@@ -1,0 +1,34 @@
+{
+  "siteName": "My Project",
+  "ticker": "AOL",
+  "contractAddress": "",
+  "socials": {
+    "twitter": "https://x.com/yourhandle",
+    "github": "https://github.com/youruser/yourrepo",
+    "discord": "https://discord.gg/yourinvite",
+    "telegram": "https://t.me/yourchannel",
+    "website": "https://yoursite.example"
+  },
+  "theme": {
+    "accent": "#dc2626",
+    "background": "#0a0a0a"
+  },
+  "contracts": {
+    "aolMint": "",
+    "usd1Mint": "",
+    "usdcMint": "",
+    "platformProgram1": "",
+    "platformProgram2": "",
+    "platformProgram3": "",
+    "platformProgram4": "",
+    "platformProgram5": "",
+    "platformProgram6": "",
+    "platformProgram7": ""
+  },
+  "domains": {
+    "api": "",
+    "gateway": "",
+    "serverApi": ""
+  },
+  "_note": "Edit this file OR set the matching env vars (env wins). `cargo run --bin rebrand` pushes these values into the cloned frontend in ../frontend/."
+}

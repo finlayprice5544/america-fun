@@ -1,0 +1,23 @@
+{
+	"name": "America.Fun",
+	"short_name": "America.Fun",
+	"description": "Discover and trade tokens on America's launchpad",
+	"icons": [
+		{
+			"src": "/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "/favicon-32x32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#c0c0c0",
+	"background_color": "#c0c0c0",
+	"start_url": "/",
+	"scope": "/",
+	"display": "standalone",
+	"orientation": "portrait-primary"
+}

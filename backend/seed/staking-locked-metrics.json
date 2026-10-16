@@ -1,0 +1,13 @@
+{
+  "aol_mint": "PLACEHOLDER_AOL_MINT_ADDRESS",
+  "total_locked_raw": "349483619242347",
+  "total_supply_raw": "999122965071432",
+  "decimals": 6,
+  "total_locked_tokens": 349483619.242347,
+  "total_supply_tokens": 999122965.071432,
+  "locked_percent": 34.979,
+  "source": "onchain_scan_cached",
+  "staking_program_id": "PLACEHOLDER_STAKING_PROGRAM_ID",
+  "vault_accounts_found": 391,
+  "staking_vault_discriminator_hex": "448d761c5754d5e9"
+}

@@ -1,0 +1,24 @@
+{
+  "_note": "Map each ORIGINAL value found in the cloned frontend to a branding key. `cargo run --bin rebrand` replaces the left side with the configured value of the right side across ../frontend/. The generator fills this in from what it detected on the source site.",
+  "source": "america.fun",
+  "map": {
+    "https://x.com/americadotfun": "socials.twitter",
+    "https://t.me/official_america_dot_fun": "socials.telegram",
+    "https://discord.gg/users": "socials.discord",
+    "america.fun": "domain",
+    "server-api.america.fun": "apiDomain",
+    "api.america.fun": "apiDomain2",
+    "gateway.america.fun": "gatewayDomain",
+    "https://fanchette-trykuo-fast-mainnet.helius-rpc.com": "solanaRpcUrl",
+    "FS1k2q8TXXon1mQway9dGFBoFiQwK1xqDwwjzNSLUBCM": "contracts.aolMint",
+    "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB": "contracts.usd1Mint",
+    "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": "contracts.usdcMint",
+    "3r1CL18ipQiD4Ta3Z4LgmPpQgF3z3vHg78C3wdzPUUSA": "contracts.platformProgram1",
+    "3RFT8GijTeo1JGGgdrLuVSHB1uGawCQNdEcniLpAqUSA": "contracts.platformProgram2",
+    "55H7TemadmEVKJDAeckX2KnDrMXwEdCNMYYVwMVTUSA": "contracts.platformProgram3",
+    "632SvBrfaep51NGKnKtUHTR9J2T4uYGKEQkCgy42USA": "contracts.platformProgram4",
+    "82XVWa4pEfPhZfN3a7ANHSy9iPekmMwm934ZUpkFMUSA": "contracts.platformProgram5",
+    "4s5hpg2Lt63q9ncVatznSVDRpG8EQHpkU89dod3zzUSA": "contracts.platformProgram6",
+    "pA3VznTTnS22JERJ2okMK3hFebbw8dEpWph6UCf6USA": "contracts.platformProgram7"
+  }
+}

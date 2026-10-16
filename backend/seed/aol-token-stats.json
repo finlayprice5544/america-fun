@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": {
+    "currentPriceUsd": "0.0003675693868708223",
+    "marketCapUsd": "367247.0156798643",
+    "totalDexVolumeUsd": "244290874",
+    "volume24hUsd": "4728.709371522382"
+  }
+}

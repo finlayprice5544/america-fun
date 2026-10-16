@@ -1,0 +1,29 @@
+{
+  "input": "https://america.fun/",
+  "canonicalUrl": "https://america.fun/",
+  "canonicalHost": "america.fun",
+  "origin": "https://america.fun",
+  "entry": "index.html",
+  "strategy": "static",
+  "spaFallback": false,
+  "redirects": [
+    {
+      "note": "host-variant",
+      "from": "https://www.america.fun/",
+      "to": "https://america.fun/",
+      "status": 307
+    }
+  ],
+  "counts": {
+    "pages": 1,
+    "assets": 383,
+    "files": 88
+  },
+  "clonedAt": "2026-10-16T16:48:09.021Z",
+  "capture": {
+    "recordedAt": "2026-10-16T16:49:20.998Z",
+    "pages": 8,
+    "entries": 594,
+    "apiEntries": 338
+  }
+}

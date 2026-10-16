@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "trades": [
+      {"txid": "PLACEHOLDER_TX_1", "owner": "PLACEHOLDER_OWNER_1", "side": "sell", "amount": 295196.758761, "usdValue": 108.637472, "timestamp": 1792163926000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_2", "owner": "PLACEHOLDER_OWNER_2", "side": "buy", "amount": 150000.0, "usdValue": 55.2, "timestamp": 1792163800000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_3", "owner": "PLACEHOLDER_OWNER_3", "side": "sell", "amount": 80000.5, "usdValue": 29.44, "timestamp": 1792163700000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_4", "owner": "PLACEHOLDER_OWNER_4", "side": "buy", "amount": 200000.0, "usdValue": 73.6, "timestamp": 1792163600000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_5", "owner": "PLACEHOLDER_OWNER_5", "side": "sell", "amount": 50000.0, "usdValue": 18.4, "timestamp": 1792163500000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_6", "owner": "PLACEHOLDER_OWNER_1", "side": "buy", "amount": 120000.0, "usdValue": 44.16, "timestamp": 1792163400000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_7", "owner": "PLACEHOLDER_OWNER_6", "side": "sell", "amount": 310000.0, "usdValue": 114.08, "timestamp": 1792163300000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_8", "owner": "PLACEHOLDER_OWNER_7", "side": "buy", "amount": 75000.0, "usdValue": 27.6, "timestamp": 1792163200000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_9", "owner": "PLACEHOLDER_OWNER_3", "side": "sell", "amount": 500000.0, "usdValue": 184.0, "timestamp": 1792163100000, "price": 0.000368},
+      {"txid": "PLACEHOLDER_TX_10", "owner": "PLACEHOLDER_OWNER_8", "side": "buy", "amount": 65000.0, "usdValue": 23.92, "timestamp": 1792163000000, "price": 0.000368}
+    ]
+  }
+}

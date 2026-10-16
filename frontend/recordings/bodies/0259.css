@@ -1,0 +1,150 @@
+:root {
+	/* Pane background */
+	--tv-color-pane-background: #0d132d;
+	/* Platform background — shows through gaps between sidebar/header/chart as separator */
+	--tv-color-platform-background: #1b244b;
+
+	/* Toolbar */
+	--tv-color-toolbar-button-text: #9ca3af;
+	--tv-color-toolbar-button-text-hover: #e5e7eb;
+	--tv-color-toolbar-button-text-active: #ffffff;
+	--tv-color-toolbar-button-text-active-hover: #ffffff;
+	--tv-color-toolbar-button-text-clicked: #ffffff;
+	--tv-color-toolbar-button-background-hover: rgba(27, 36, 75, 0.6);
+	--tv-color-toolbar-button-background-active: rgba(27, 36, 75, 0.8);
+	--tv-color-toolbar-button-background-active-hover: rgba(27, 36, 75, 1);
+	--tv-color-toolbar-button-background-clicked: rgba(27, 36, 75, 0.5);
+	--tv-color-toolbar-button-background-expanded: #151a34;
+	--tv-color-toolbar-toggle-button-background-active: rgba(27, 36, 75, 0.8);
+	--tv-color-toolbar-toggle-button-background-active-hover: rgba(27, 36, 75, 1);
+
+	/* Popups & dropdowns */
+	--tv-color-popup-background: #151a34;
+	--tv-color-popup-element-text: #d1d5db;
+	--tv-color-popup-element-text-hover: #ffffff;
+	--tv-color-popup-element-text-active: #ffffff;
+	--tv-color-popup-element-hint-text: #6b7280;
+	--tv-color-popup-element-secondary-text: #9ca3af;
+	--tv-color-popup-element-background-hover: rgba(27, 36, 75, 0.6);
+	--tv-color-popup-element-background-active: rgba(27, 36, 75, 0.8);
+	--tv-color-popup-element-toolbox-text: #9ca3af;
+	--tv-color-popup-element-toolbox-text-hover: #e5e7eb;
+	--tv-color-popup-element-toolbox-text-active-hover: #ffffff;
+	--tv-color-popup-element-toolbox-background-hover: rgba(27, 36, 75, 0.6);
+	--tv-color-popup-element-toolbox-background-active-hover: rgba(27, 36, 75, 1);
+
+	/* Dialogs */
+	--tv-color-dialog-header-text: #e5e7eb;
+	--tv-color-dialog-header-separator: #1b244b;
+
+	/* Scrollbar */
+	--tv-color-scrollbar-thumb-background: rgba(27, 36, 75, 0.8);
+
+	/* Active item */
+	--tv-color-item-active-text: #818cf8;
+
+	/* ===== Dialog backgrounds ===== */
+	--color-bg-primary: #0d132d;
+	--color-bg-primary-hover: #151a34;
+	--color-bg-secondary: #0a0f24;
+	--color-bg-highlight: #151a34;
+	--color-bg-scroll-buttons: #151a34;
+	--color-background-dialog-simple: #0d132d;
+	--color-background-dialog-complicated: #0d132d;
+	--color-background-dialog-promo: #0d132d;
+	--color-background-dialog-fullscreen: #0a0f24;
+
+	/* ===== Modal overlay ===== */
+	--color-other-modal-background: rgba(0, 0, 0, 0.5);
+
+	/* ===== Text colors ===== */
+	--color-text-primary: #e5e7eb;
+	--color-text-secondary: #9ca3af;
+	--color-text-tertiary: #6b7280;
+	--color-text-disabled: #4b5563;
+	--color-active-hover-text: #e5e7eb;
+
+	/* ===== Input fields ===== */
+	--color-input-bg: #1b244b;
+	--color-input-placeholder-text: #4b5563;
+	--color-input-textarea-readonly: #1b244b;
+
+	/* ===== Popup menu items (--color-* variants used by some dialogs) ===== */
+	--color-popup-background: #151a34;
+	--color-popup-element-text: #d1d5db;
+	--color-popup-element-text-hover: #ffffff;
+	--color-popup-element-background-hover: rgba(27, 36, 75, 0.6);
+	--color-popup-element-text-active: #ffffff;
+	--color-popup-element-background-active: #1b244b;
+	--color-popup-element-secondary-text: #9ca3af;
+	--color-popup-element-hint-text: #6b7280;
+	--color-popup-element-toolbox-text: #9ca3af;
+	--color-popup-element-toolbox-text-hover: #e5e7eb;
+	--color-popup-element-toolbox-text-active-hover: #ffffff;
+	--color-popup-element-toolbox-background-hover: rgba(27, 36, 75, 0.6);
+	--color-popup-element-toolbox-background-active-hover: rgba(27, 36, 75, 1);
+	--color-popup-menu-item-hover-bg: #1b244b;
+
+	/* ===== Cards & widgets ===== */
+	--color-widget-pages-bg: #0a0f24;
+	--color-box-shadow: rgba(0, 0, 0, 0.4);
+
+	/* ===== Borders & separators ===== */
+	--color-border: #1b244b;
+	--color-border-hover: #253263;
+	--color-border-table: #1b244b;
+	--color-divider: #1b244b;
+	--color-divider-hover: #253263;
+	--color-divider-secondary: #1b244b;
+	--color-widget-border: #1b244b;
+	--color-section-separator-border: #1b244b;
+	--color-popup-menu-separator: #1b244b;
+	--color-separator-table-chat: #1b244b;
+	--color-toolbar-divider-background: #1b244b;
+	--color-scroll-border: #1b244b;
+	--color-card-border: #1b244b;
+	--color-card-border-hover: #253263;
+}
+
+/* ── Price / Mcap toggle ── */
+.chart-type-toggle {
+	display: flex;
+	align-items: center;
+	padding: 0 0 0 10px;
+	margin: 0 0 0 4px;
+	border: none;
+	background: transparent;
+	cursor: default;
+	border-left: 1px solid #1b244b;
+}
+
+.chart-type-toggle__item {
+	font-size: 13px;
+	font-weight: 600;
+	padding: 2px 4px;
+	cursor: pointer;
+	color: #9ca3af;
+	transition: color 0.15s;
+}
+
+.chart-type-toggle__item:hover {
+	color: #e5e7eb;
+}
+
+.chart-type-toggle__item:focus-visible {
+	outline: 2px solid #387BDF;
+	outline-offset: 1px;
+	border-radius: 3px;
+}
+
+.chart-type-toggle__item--active,
+.chart-type-toggle__item--active:hover {
+	color: #387BDF;
+}
+
+.chart-type-toggle__slash {
+	color: #4b5563;
+	font-size: 13px;
+	cursor: default;
+	user-select: none;
+}

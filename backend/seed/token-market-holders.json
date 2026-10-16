@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "data": {
+    "holders": [
+      {"address": "PLACEHOLDER_HOLDER_1", "amount": "50000000", "uiAmount": 50000000, "decimals": 6, "uiAmountString": "50000000", "rank": 1, "percentage": 5.004},
+      {"address": "PLACEHOLDER_HOLDER_2", "amount": "45000000", "uiAmount": 45000000, "decimals": 6, "uiAmountString": "45000000", "rank": 2, "percentage": 4.503},
+      {"address": "PLACEHOLDER_HOLDER_3", "amount": "38000000", "uiAmount": 38000000, "decimals": 6, "uiAmountString": "38000000", "rank": 3, "percentage": 3.803},
+      {"address": "PLACEHOLDER_HOLDER_4", "amount": "32000000", "uiAmount": 32000000, "decimals": 6, "uiAmountString": "32000000", "rank": 4, "percentage": 3.203},
+      {"address": "PLACEHOLDER_HOLDER_5", "amount": "28000000", "uiAmount": 28000000, "decimals": 6, "uiAmountString": "28000000", "rank": 5, "percentage": 2.803},
+      {"address": "PLACEHOLDER_HOLDER_6", "amount": "25000000", "uiAmount": 25000000, "decimals": 6, "uiAmountString": "25000000", "rank": 6, "percentage": 2.503},
+      {"address": "PLACEHOLDER_HOLDER_7", "amount": "20000000", "uiAmount": 20000000, "decimals": 6, "uiAmountString": "20000000", "rank": 7, "percentage": 2.002},
+      {"address": "PLACEHOLDER_HOLDER_8", "amount": "18000000", "uiAmount": 18000000, "decimals": 6, "uiAmountString": "18000000", "rank": 8, "percentage": 1.802},
+      {"address": "PLACEHOLDER_HOLDER_9", "amount": "15000000", "uiAmount": 15000000, "decimals": 6, "uiAmountString": "15000000", "rank": 9, "percentage": 1.502},
+      {"address": "PLACEHOLDER_HOLDER_10", "amount": "12000000", "uiAmount": 12000000, "decimals": 6, "uiAmountString": "12000000", "rank": 10, "percentage": 1.201}
+    ]
+  }
+}
